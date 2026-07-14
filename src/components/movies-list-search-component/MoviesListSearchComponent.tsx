@@ -23,7 +23,6 @@ const MoviesListSearchComponent = ({query}: Props) => {
             {
                 movies.length === 0 && query && (<p className="text-center">No results found</p>)
             }
-
             {
                 movies.map(movie => (<MoviesListCardComponent key={movie.id} movie={movie}/>))
             }

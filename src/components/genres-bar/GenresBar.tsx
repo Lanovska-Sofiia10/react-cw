@@ -4,9 +4,7 @@ import {moviesActions} from "../../hooks/slices/movieSlice.tsx";
 const GenresBar = () => {
 
     const dispatch = useAppDispatch();
-
     const genres = useAppSelector(state => state.genresListSlice.genres);
-
     const selectedGenre = useAppSelector(state => state.movieSlice.genreId);
 
     const handleClick = (id: number | null) => {

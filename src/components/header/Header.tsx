@@ -4,15 +4,10 @@ import {useNavigate} from "react-router";
 const Header = () => {
 
     const navigate = useNavigate();
-
     const [query, setQuery] = useState("");
-
     const submit = (e: FormEvent) => {
-
         e.preventDefault();
-
         if (!query.trim()) return;
-
         navigate(`/search?query=${encodeURIComponent(query)}`);
     };
 

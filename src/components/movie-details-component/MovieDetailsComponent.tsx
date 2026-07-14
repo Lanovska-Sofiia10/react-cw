@@ -8,7 +8,6 @@ const MovieDetailsComponent = ()=> {
 
     const { id } = useParams();
     const dispatch = useAppDispatch();
-
     const movie = useAppSelector(state => state.MovieDetailsSlice.movie);
 
     useEffect(() => {
@@ -21,9 +20,7 @@ const MovieDetailsComponent = ()=> {
 
     return (
         <div className="container my-5">
-
             <div className="row g-4">
-
                 <div className="col-md-4">
                     <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="img-fluid rounded shadow"/>
                 </div>
